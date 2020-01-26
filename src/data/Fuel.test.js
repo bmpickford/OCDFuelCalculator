@@ -22,4 +22,17 @@ describe('fuel data test suite', () => {
 
         expect(got).toBe(undefined);
     });
+
+    it('finds fuel data when called multiple times', () => {
+        const price = 0.98;
+        const want = '{"price":0.98,"litres":[50,100]}';
+        const got = FindLitresForFuelPrice(price);
+        expect(JSON.stringify(got)).toBe(want);
+
+        const gotagain = FindLitresForFuelPrice(price);
+        expect(JSON.stringify(gotagain)).toBe(want);
+
+        const gotonceagain = FindLitresForFuelPrice(price);
+        expect(JSON.stringify(gotonceagain)).toBe(want);
+    });
 });

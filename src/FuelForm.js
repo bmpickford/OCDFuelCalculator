@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class FuelForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {fuelPrice: 0};
+        this.state = {fuelPrice: ''};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
@@ -24,7 +24,7 @@ class FuelForm extends Component {
                 <form className="fuel-form" onSubmit={this.handleSubmit}>
                     <div className="form-group row justify-content-md-center">
                         <div className="col">
-                            <input type="number" placeholder="Enter a fuel price" value={this.state.fuelPrice} onChange={this.handleChange}/>
+                            <input type="number" step="0.01" placeholder="Enter a fuel price" value={this.state.fuelPrice} onChange={this.handleChange}/>
                         </div>
                     </div>
                     <div className="form-group row justify-content-md-center">

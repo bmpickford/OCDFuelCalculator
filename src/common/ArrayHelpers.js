@@ -1,8 +1,8 @@
 export const SpliceArr = (arr, size) => {
     let arrays = [];
-
-    while (arr.length > 0)
-        arrays.push(arr.splice(0, size));
-
+    for (let i = 0; i < Math.ceil(arr.length / size); i++)
+        arrays.push([...arr.slice(i * size, size + (i * size))]);
+    
+    
     return arrays;
 }

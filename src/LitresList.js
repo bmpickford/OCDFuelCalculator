@@ -13,7 +13,7 @@ class LitresList extends Component {
             return;
         }
 
-        price = parseFloat(price).toFixed(2)
+        price = parseFloat(price).toFixed(2);
 
         const priceData = FindLitresForFuelPrice(price);
         if (!priceData) {
@@ -21,8 +21,8 @@ class LitresList extends Component {
                 <div>No Price Found</div>
             )
         }
-
         const splitPrices = SpliceArr(priceData.litres, 3);
+
         return (
            splitPrices.map((litres) =>{
                return (
