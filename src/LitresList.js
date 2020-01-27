@@ -13,8 +13,7 @@ class LitresList extends Component {
             return;
         }
 
-        price = parseFloat(price).toFixed(2);
-
+        price = parseFloat(price / 100).toFixed(3);
         const priceData = FindLitresForFuelPrice(price);
         if (!priceData) {
             return (

@@ -14,9 +14,9 @@ type FuelAmount struct {
 func main() {
 	var fuelPrices []FuelAmount
 
-	for i := 0.8; i < 2.0; i = i + 0.01 {
+	for i := 0.800; i < 2.000; i = i + 0.001 {
 		calculatedLitres := FuelAmount{
-			Price:  math.Round(i*100) / 100,
+			Price:  math.Round(i*1000) / 1000,
 			Litres: calculate(i),
 		}
 		fuelPrices = append(fuelPrices, calculatedLitres)

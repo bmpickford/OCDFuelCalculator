@@ -24,7 +24,7 @@ class FuelForm extends Component {
                 <form className="fuel-form" onSubmit={this.handleSubmit}>
                     <div className="form-group row justify-content-md-center">
                         <div className="col">
-                            <input type="number" step="0.01" placeholder="Enter a fuel price" value={this.state.fuelPrice} onChange={this.handleChange}/>
+                            <input type="number" step="0.1" placeholder="Enter a fuel price (cents)" value={this.state.fuelPrice} onChange={this.handleChange}/>
                         </div>
                     </div>
                     <div className="form-group row justify-content-md-center">
