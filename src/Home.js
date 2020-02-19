@@ -17,9 +17,6 @@ class Home extends Component {
     render() {
         return (
             <div className="container fuel-container">
-                <h3>Fuel Calculator</h3>
-                <h6>A tool to find out how much fuel you need to put in, to get an even number for the fuel and total price</h6>
-
                 <FuelForm onSubmit={this.findPrice} />
                 <LitresList price={this.state.fuelPrice} />
             </div>

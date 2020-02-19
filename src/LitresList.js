@@ -15,7 +15,7 @@ class LitresList extends Component {
 
         price = parseFloat(price / 100).toFixed(3);
         const priceData = FindLitresForFuelPrice(price);
-        if (!priceData) {
+        if (!priceData || priceData.litres.length === 0) {
             return (
                 <div>No Price Found</div>
             )
