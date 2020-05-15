@@ -3,8 +3,12 @@
 }
 
 .fuel-input-form {
-    margin-top: 12vh;
+    padding-top: 46vh;
     margin-bottom: 8vh;
+}
+
+.submitted-input-form {
+    padding-top: 2vh;
 }
 
 #fuel_help {

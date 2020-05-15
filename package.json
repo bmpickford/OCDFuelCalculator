@@ -6,12 +6,14 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "framer-motion": "^1.10.3",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-spring": "^8.0.27"
   },
   "devDependencies": {
-    "react-test-renderer": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "^3.4.1",
+    "react-test-renderer": "^16.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
