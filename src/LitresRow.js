@@ -5,6 +5,7 @@ import './LitresList.css';
 import LitresInfo from './LitreInfo';
 
 const LitresRow = ({litres, price, index}) => {
+
     return (
         litres.map((litre, childIndex) => {
             const num = (index * 3) + childIndex;

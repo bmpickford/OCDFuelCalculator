@@ -1,21 +1,16 @@
 
 import React from 'react';
-import { useSprings, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 
 import './LitresList.css';
 
 const LitresInfo = ({litre, price, index}) => {
-    const delay = 5000;
     // console.log(index)
-    const [props, set] = useSprings({
-        opacity: 1,
-        from: { opacity: 0 },
-        config: { delay: 5000 }
-    });
+    const [props, set] = useSpring(() => ({ opacity: 0 }));
 
     React.useEffect(() => {
-        set({ opacity: 1, from: { opacity: 0 }, delay });
-    }, []);
+        setTimeout(() => set({ opacity: 1 }), 150 * index);
+    }, [index, set]);
 
     return (
         <div className="col-md-4 col-xs-12" key={litre}>
