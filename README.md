@@ -1,9 +1,32 @@
-## OCD Fuel Calculator
-[![Build Status](https://travis-ci.org/bmpickford/OCDFuelCalculator.svg?branch=master)](https://travis-ci.org/bmpickford/OCDFuelCalculator)
+# ocdfuelcalc
 
-This app helps people with that little bit of OCD and would love to know exactly how much fuel to put in their car so both the Litres and Price guages fall on an absolute number
+> Get the optimal number of litres you should put in your car so you only see whole number at the pump.
 
-See the working app at www.ocd.benpickford.me
+![app screenshot](./app.png)
 
-## Tech
-The fuel price calculation was written in Go, and the app using React. To run locally, use `npm run start`
+### www.ocd.benpickford.me
+
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
