@@ -59,7 +59,7 @@
 </template>
 <script setup lang="ts">
 import { useMotion } from "@vueuse/motion";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 const target = ref<HTMLElement>();
 const inputEl = ref<HTMLElement>();
 
@@ -70,6 +70,11 @@ const emit = defineEmits<{
 
 const price = ref();
 const canSearch = ref(true);
+const initialSearchPosition = ref(0);
+
+onMounted(() => {
+  initialSearchPosition.value = target.value?.getBoundingClientRect().top || 0;
+})
 
 // Get the variant from target motion instance.
 const { apply } = useMotion(target, {
@@ -110,13 +115,9 @@ const submitForm = async () => {
   canSearch.value = false;
   inputEl.value?.blur();
   emit("search", price.value);
-  const top = target.value?.getBoundingClientRect()?.top;
-  if (!top) {
-    console.warn('Could not determine "top" value.');
-    return;
-  }
+  const topVal = initialSearchPosition.value * -1 + 20
   await apply({
-    y: top * -1 + 20,
+    y: topVal,
     scale: 0.9,
     transition: {
       type: "spring",
